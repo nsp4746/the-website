@@ -1,24 +1,82 @@
+---
+import Navigation from '../components/Navigation.astro';
+import '../styles/global.css';
+const pageTitle = "About Me";
+
+const identity = {
+    firstName: "Nikhil",
+    country: "USA",
+    occupation: "Student & Cybersecurity Enthusiust",
+    hobbies: ["Gaming", "Working Out", "Hiking"],
+};
+
+const skills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Python",
+    "C++",
+    "Java",
+    "Cybersecurity",
+];
+
+const happy = true;
+const finished = false;
+const goal = 3; // Boolean value changes the statement that is rendered
+
+const skillColor = "navy";
+---
+
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>Astro</title>
+        <title>{pageTitle}</title>
+        <style define:vars={{skillColor}}>
+            h1 {
+                color: violet;
+                font-size: 4rem
+            }
+            
+            .skill {
+                color: var(--skillColor);
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/blog">Blog</a>
-        <h1>About me</h1>
+        <Navigation />
+        <h1>{pageTitle}</h1>
         <h2>... and my new website built in astro</h2>
         <p>
             Currently I am working through Astro's tutorial. This is the seocnd
             page on my website.
         </p>
-        <p>
-            This site will update as I complete more of the tutorial! So be sure
-            to keep checking back!!!!
-        </p>
+        <p>Here are a few facts about me:</p>
+        <ul>
+            <li>My name is {identity.firstName}.</li>
+            <li>
+                I live in the {identity.country} and I am a {
+                    identity.occupation
+                }.
+            </li>
+            {
+                identity.hobbies.length >= 2 && (
+                    <li>
+                        Two of my hobbies are: {identity.hobbies[0]} and{" "}
+                        {identity.hobbies[1]}
+                    </li>
+                )
+            }
+        </ul>
+        <p> My skills are:</p>
+        <ul>
+            {skills.map((skill) => <li class="skill">{skill}</li>)} <!-- This is a way to list out a whole array -->
+        </ul> 
+        {happy && <p> I am happy to be learning astro!</p>}
+        {finished && <p>I finished this tutorial!</p>}
+        {goal === 3 ? <p>My goal is to finish in three days</p> : <p>My goal is not 3 days</p>}
     </body>
 </html>
