@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/MarkdownPostLayout.astro'
 title: My 2nd Blog Post
 author: Nikhil Patil
 description: "after learning some astro, its pretty fun"
