@@ -6,5 +6,6 @@ const allPosts = await Astro.glob('../pages/projects/*.mdx');
 <BaseLayout pageTitle={frontmatter.title}>
     <p> Project Dates: {frontmatter.projdates}</p>
     <p> Project Description: {frontmatter.description}</p>
+    <slot></slot>
 </BaseLayout>
 
