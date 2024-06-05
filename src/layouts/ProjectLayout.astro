@@ -1,0 +1,10 @@
+---
+import BaseLayout from "./BaseLayout.astro"
+const {frontmatter} = Astro.props;
+const allPosts = await Astro.glob('../pages/projects/*.mdx');
+---
+<BaseLayout pageTitle={frontmatter.title}>
+    <p> Project Dates: {frontmatter.projdates}</p>
+    <p> Project Description: {frontmatter.description}</p>
+</BaseLayout>
+

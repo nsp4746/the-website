@@ -1,11 +1,34 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Greeting from "../components/Greeting";
 const pageTitle = "Home Page";
-
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <h3>Nikhil</h3>
-    <Greeting client:load messages={["Hi","Hello","Howdy","Hey There","Ciao","Hallo","Hola","Namaste","Nihao","Konichiwa"]}/>
+    <Greeting
+        client:load
+        messages={[
+            "Hi",
+            "Hello",
+            "Howdy",
+            "Hey There",
+            "Ciao",
+            "Hallo",
+            "Hola",
+            "Namaste",
+            "Nihao",
+            "Konichiwa",
+        ]}
+    />
+    <p>
+        Hello, my name is Nikhil Patil and I am an accelerated Cybersecurity
+        BS/MS student at at the Rochester Institute of Technology! In addition
+        to pursuing my degrees in Cybersecurity I am also pursuing a minor in
+        Software Engineering. I have a strong passion and endearment for the
+        field of Cybersecurity and have been driven toward making a career out
+        of it since I was young. I am currently in my fourth year, searching for
+        an internship. I have experience in the following: penetration testing, malware analysis,
+        setting up active-directory environments, and developing other <a  href="/projects" style="color: violet">projects</a>... and I am always looking for new opportunities to perfect my
+        craft.
+    </p>
 </BaseLayout>
