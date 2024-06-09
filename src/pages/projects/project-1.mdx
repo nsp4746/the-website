@@ -3,5 +3,13 @@ layout: '../../layouts/ProjectLayout.astro'
 title: "Web Application Fuzzer"
 projdates: "Jan 2024 - Feb 2024"
 description: Web Application Fuzzer written in python designed to test various exploits and vulnerabilites on a docker environment
-
+projecttype: "Academic"
 ---
+
+import { Image } from 'astro:assets';
+import outputImage from '../../../public/assets/images/project-1-image1.png';
+
+### Images
+
+<Image src = { outputImage }  alt="Output the webapp fuzzer" width={750} height={"auto"} quality={100} title='Output of the WebApp Fuzzer'/>
+This image is an example output of the web fuzzer, displaying its functionality. It can act as a web crawler, an autonomous authenticaiton for DVWA, as well as test for sanitization of input forms

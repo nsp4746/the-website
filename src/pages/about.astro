@@ -5,7 +5,7 @@ const pageTitle = "About Me";
 const identity = {
     firstName: "Nikhil",
     country: "USA",
-    occupation: "Student & Cybersecurity Enthusiust",
+    occupation: "student & cybersecurity enthusiust",
     hobbies: ["Gaming", "Working Out", "Hiking"],
 };
 
@@ -17,6 +17,8 @@ const skills = [
     "C++",
     "Java",
     "Cybersecurity",
+    "OSINT",
+    "Pentesting",
 ];
 
 const happy = true;
@@ -29,8 +31,7 @@ const skillColor = "navy";
 <BaseLayout pageTitle={pageTitle}>
     <h2>... and my new website built in astro</h2>
     <p>
-        Currently I am working through Astro's tutorial. This is the seocnd page
-        on my website.
+        Currently I am working on making this website better and better! :)
     </p>
     <p>Here are a few facts about me:</p>
     <ul>
@@ -53,12 +54,4 @@ const skillColor = "navy";
         <!-- This is a way to list out a whole array -->
     </ul>
     {happy && <p> I am happy to be learning astro!</p>}
-    {finished && <p>I finished this tutorial!</p>}
-    {
-        goal === 3 ? (
-            <p>My goal is to finish in three days</p>
-        ) : (
-            <p>My goal is not 3 days</p>
-        )
-    }</BaseLayout
->
+</BaseLayout>
