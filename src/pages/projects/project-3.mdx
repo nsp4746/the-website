@@ -1,0 +1,18 @@
+---
+layout: '../../layouts/ProjectLayout.astro'
+title: "Neural Network Model for detecting DDoS Attacks"
+projdates: "September 2024"
+description: "Researched how to create and run a neural network via Tensorflow to detect DDoS attacks. 
+The model was trained on a dataset of thousands samples and achieved an accuracy of 99%. The model used the algorithm random-forest from 
+scikit-learn, and the dataset was from the CICIDS 2017 Friday DDoS dataset."
+projecttype: "Academic"
+---
+
+import { Image } from 'astro:assets';
+import outputImage from '../../../public/assets/images/project-3-image1.png';
+
+### Images
+
+<Image src = { outputImage }  alt="The Neural netowkr Training Results" width={750} height={"auto"} quality={100} title='Output of the WebApp Fuzzer'/>
+This image shows the results of the neural network model training. The model was trained on a dataset of thousands of samples and achieved an accuracy of 98%. The model used the algorithm random-forest from scikit-learn, and the dataset was from the CICIDS 2017 Friday DDoS dataset.
+```
